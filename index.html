@@ -1,283 +1,339 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FiereHr</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/resume.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <!--Title-->
+ <title>Creative Resume</title>
+    <link rel="icon" href="./assets/LOGO.png" size="32x32">
+    <!--Progress Bar style-->
+    <style>
+      .progress{   width: 150px;   height: 150px;  font-family: 'Poppins', sans-serif;  line-height: 150px;    background: none;    margin: 0 auto;    box-shadow: none;    position: relative;}
+.progress:after{   content: "";    width: 100%;    height: 100%;    border-radius: 50%;    border: 8px solid transparent;    position: absolute;    top: 0;    left: 0;}
+.progress > span{   width: 50%;    height: 100%;    overflow: hidden;    position: absolute;    top: 0;    z-index: 1;}
+.progress .progress-left{  left: 0;}
+.progress .progress-bar{    width: 100%;    height: 100%;   background: none;    border-width: 3px;    border-style: solid;    position: absolute;    top: 0;}
+.progress .progress-left .progress-bar{    left: 100%;    border-top-right-radius: 80px;   border-bottom-right-radius: 80px;    border-left: 0;    -webkit-transform-origin: center left;    transform-origin: center left;}
+.progress .progress-right{    right: 0;}
+.progress .progress-right .progress-bar{    left: -100%; border-top-left-radius: 80px;    border-bottom-left-radius: 80px;    border-right: 0;    -webkit-transform-origin: center right;    transform-origin: center right;    animation: loading-1 1.8s linear forwards;}
+.progress .progress-value{    width: 60%;     height: 60%;     top: 20%;     position: absolute;    left: 20%;  border-radius: 50%;      text-align: center;   background: #ffffff52;
+  font-size: 16px;     color: white;     line-height: 100px;}
+.progress.blue .progress-bar{    border-color: #af010b;}
+.progress.blue .progress-left .progress-bar{    animation: loading-2 1.5s linear forwards 1.8s;}
 
-    <!-- Css Links -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <img src="assets/img/logo.svg"  alt="" class="img-fluid logo">
-            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+
+    </style>
+  </head>
+  <!--Hader Closes-->
+  <!--Body-->
+  <body>
+    <!--Landing Page-->
+   <div class="landing-Img"></div>
+     
+   <section>
+    <div class="nav-bar">
+      <nav class="navbar navbar-expand-lg" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars fa4" style="color: #af010b;"></i></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item active" id="find-creative">
-                    <a class="nav-link text-uppercase font-weight-bolder"  href="index.html">Find a Creative<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link font-weight-bolder" id="nav-links" href="#"> About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link font-weight-bold" id="nav-links" href="#">Service</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link font-weight-bold" id="nav-links" href="#">Work</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link font-weight-bold" id="nav-links" href="#">Client</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link font-weight-bold" id="nav-links" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-              </div>
-        </div>
+          <div class="nav  collapse  navbar-nav navbar-collapse" id="navbarResponsive"  style="justify-content: center;">
+              <a class="nav-item nav-link active" href="index.html">About<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">Services</a>
+              <a class="nav-item nav-link active" href="#">Works <span class="sr-only"></span></a>
+              <a class="nav-item nav-link" href="#">Client</a>
+              <a class="nav-item nav-link active" href="#">Contact <span class="sr-only"></span></a>
+          </div>
+      </nav>
+    </div>
+    </section>
+     <a class="navbar-brand" href="index.html">
+       <img src="./assets/LOGO.svg">
+     </a>
+     <p class="textnav">Find a creative</p>
+     <div class="container box">
+      <h3>Here</h3>
+      <h1>ALLY <span>DESIGNS</span></h1>
+    </div>
+    <div class="arrow">
+    <a href="#container"><img src = "./assets/arrowdown.svg"></a>
+    </div>
+     <!--Landing Page Closes-->
+
+     <!--Second Page-->
+     <section>
+     <div class="container-fluid" id="container">
+       <nav class="nav nav-tabs nav-stacked" style="border: none;">
+         <a class="nav-link page" href="#">ALLISSON SMITH</a>
+         <a class="nav-link page" href="#">+1 98998 32783748 </a>
+         <a class="nav-link page" href="#">allisonsmith@fiercehr.ng</a>
        </nav>
-        <!-- Start of Carousel -->
-         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators d-none">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100 img-fluid" src="assets/img/carousel1.png" alt="First slide">
-                    <div class="layer"></div>
-                    </div>
-                </div>
+       <div class="about">
+        <h3><span>WHY</span> CHOOSE ME<i class="fa fa-question"></i></h3>
+      </div>
 
-                <!-- <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/carousel1.png" alt="Second slide">
-                </div>
-
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/carousel1.png" alt="Third slide">
-                </div>
-            </div> -->
-
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-            </a>
-       </div>
-
-        <!-- End oF Carousel  -->
-
-
-
-       <!-- Start Categories Section -->
-       <div class="categories w-100">
-            <div class="container-fluid p-0">
-                <div class="row mx-0 p-0">
-                        <div class="col-12">
-                            <h1 class="text-uppercase categories-heading text-center">Get the best of</h1>
-                        </div>
-                </div>
-
-                <div class="row mx-0 justify-content-center align-items-center categories-list">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 p-0 bckg">
-                          <div class="card bg-transparent" style="max-width: 100%;">
-                                  <div class="row mx-0 no-gutters p-0">
-                                    <div class="col-2">
-                                      <img src="assets/icons/camera_24px.png" class="card-img img-fluid" alt="...">
-                                    </div>
-                                    <div class="col-10">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Photography</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto vitae under.</p>
-                                      
-                                      </div>
-                                    </div>
-                              </div>
-                          </div>
-                          </div>
-      
-                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 p-0 bckg">
-                                  <div class="card bg-transparent" style="max-width: 100%;">
-                                          <div class="row mx-0 no-gutters p-0">
-                                            <div class="col-2">
-                                              <img src="assets/icons/developer_board_24px.png" class="card-img img-fluid" alt="...">
-                                            </div>
-                                            <div class="col-10">
-                                              <div class="card-body">
-                                                <h5 class="card-title">Industrial Design</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto vitae under.</p>
-                                              
-                                              </div>
-                                            </div>
-                                      </div>
-                                  </div>
-                                  </div>
-              
-                      </div>
-
-                      <div class="row mx-0 justify-content-center align-items-center categories-list p-xs-0">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 p-0 bckg">
-                              <div class="card bg-transparent" style="max-width: 100%;">
-                                      <div class="row mx-0 no-gutters p-0">
-                                        <div class="col-2">
-                                          <img src="assets/icons/color_lens_24px.png" class="card-img img-fluid" alt="...">
-                                        </div>
-                                        <div class="col-10">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Art</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto vitae under.</p>
-                                          
-                                          </div>
-                                        </div>
-                                  </div>
-                              </div>
-                              </div>
-          
-                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 p-0 bckg">
-                                      <div class="card bg-transparent" style="max-width: 100%;">
-                                              <div class="row mx-0 no-gutters p-0">
-                                                <div class="col-2">
-                                                  <img src="assets/icons/how_to_reg_24px.svg" class="card-img img-fluid" alt="...">
-                                                </div>
-                                                <div class="col-10">
-                                                  <div class="card-body">
-                                                    <h5 class="card-title">Content Creation</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto vitae under.</p>
-                                                  
-                                                  </div>
-                                                </div>
-                                          </div>
-                                      </div>
-                                      </div>
-                  
-                          </div>
-
-                          <div class="row mx-0 justify-content-center align-items-center categories-list p-xs-0">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 p-0 bckg">
-                                  <div class="card bg-transparent" style="max-width: 100%;">
-                                          <div class="row mx-0 no-gutters p-0">
-                                            <div class="col-2">
-                                              <img src="assets/icons/icons8-illustrator-80 (1) 1.svg" class="card-img img-fluid" alt="...">
-                                            </div>
-                                            <div class="col-10">
-                                              <div class="card-body">
-                                                <h5 class="card-title">Illustration</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto vitae under.</p>
-                                              
-                                              </div>
-                                            </div>
-                                      </div>
-                                  </div>
-                                  </div>
-              
-                                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 p-0 bckg">
-                                          <div class="card bg-transparent" style="max-width: 100%;">
-                                                  <div class="row mx-0 no-gutters p-0">
-                                                    <div class="col-2">
-                                                      <img src="assets/icons/icons8-design-64 1.svg" class="card-img img-fluid" alt="...">
-                                                    </div>
-                                                    <div class="col-10">
-                                                      <div class="card-body">
-                                                        <h5 class="card-title">Graphic Design</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto vitae under.</p>
-                                                      
-                                                      </div>
-                                                    </div>
-                                              </div>
-                                          </div>
-                                          </div>
-                              </div>    
-                    </div>
-                    <div class="d-none d-lg-block position-absolute circles">
-                        <img src="assets/icons/Group 9.png" alt=""> 
-                    </div>
-                    <div class="d-none d-lg-block position-absolute circles1">
-                        <img src="assets/icons/Group 9.png" alt=""> 
-                    </div>
-                    <div class="d-none d-md-block position-absolute social-media">
-                        <img src="assets/icons/Group 7.png" alt="">
-                    </div>
-                </div>
-        <!-- End Categories Section -->
-        
-    <!-- Start Footer -->
-        <div class="contact w-100">
-            <footer>
-                <div class="row mx-0 pt-xs-3 align-items-start row-footer">
-                    <div class=" col-5 col-md-5">
-                        <img src="assets/img/logo-footer.svg" class="img-fluid mb-5" alt="">
-                        <p class="footer-text d-none d-sm-none d-md-block mb-5">Design-driven companies worldwide use
-                        FierceHR to recruit exceptional talent.</p>
-                        <p class="footer-subtext d-none d-sm-none d-md-block font-weight-bold"> Connect with us for new jobs & projects</p>
-                        <div class="d-flex flex-column d-md-none">
-                                <a href="#" class="text-capitalize font-weight-light mb-4">About us</a>
-                                <a href="#" class="text-capitalize font-weight-light mb-4">FAQ</a>
-                                <a href="#" class="text-capitalize font-weight-light mb-4">Privacy policy</a>
-                                <a href="#" class="text-capitalize font-weight-light">Contact us</a>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-3 pt-0 pt-sm-0 pt-md-5 px-0 px-sm-0 px-md-5 m-auto d-none d-sm-none d-md-block">
-                        <h1 class="display-4 font-weight-bolder mb-3">FierceHR</h1>
-                        <div class="d-flex flex-column ">
-                            <a href="#" class="text-capitalize font-weight-light mb-4">About us</a>
-                            <a href="#" class="text-capitalize font-weight-light mb-4">FAQ</a>
-                            <a href="#" class="text-capitalize font-weight-light mb-4">Privacy policy</a>
-                            <a href="#" class="text-capitalize font-weight-light">Contact us</a>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-4 pt-0 pt-sm-0 pt-md-5 px-0 px-sm-0 px-md-5 m-xs-none m-sm-none m-md-auto">
-                            <h1 class="hiring-text font-weight-bolder mb-xs-5 mb-sm-5 mb-md-3 ">Hiring Tools</h1>
-                            <div class="d-flex flex-column">
-                                <a href="#" class="text-capitalize font-weight-light mb-4">Post a job</a>
-                                <a href= "#" class="text-capitalize font-weight-light mb-4">Find designers</a>
-                                <a href="#" class="text-capitalize font-weight-light mb-4">Job network</a>
-                                <a href="#" class="text-capitalize font-weight-light">Design salary guide</a>
-                            </div>
-                    </div>
-                    <div class="col-3 d-md-none">
-                            <img src="assets/icons/Group 7.png" alt="">
-                    </div>  
-                </div>
-                <div class="d-block d-md-none">
-                        <div class="row justify-content-center mt-5 mx-0">
-                                <div class="col-5">
-                                    <hr style="border:0.5px solid #2F2E2E;">
-                                </div>
-                            </div>
-                            <div class="row mx-0 justify-content-center">
-                                <div class="col-6">
-                                    <p class="copyright font-weight-bold text-right">Copyright <span>&copy;</span> by FierceHR</p>
-                                </div>
-                                <div class="col-6">
-                                        <p class="copyright font-weight-bold text-capitalize">All rights reserved</p>
-                                </div>
-                            </div>
-                </div>
-                
-            </footer>
+      <div class="container-md">
+      <div class="row">
+        <div class=" col-sm-5">
+         <h6> <img src="./assets/icons8-design-64 1.svg"> &nbsp;&nbsp;Graphic Design</h6>
+         <p>Nam quam nunc, blandit vel, luctus pulvinar, hend lorem.
+            Maecenas nec odioet ante tincidunt tempus luctus pulvinar,
+            hendrerit id, lorem.</p>
         </div>
-
-    <!--End Footer Section -->
-
+        <div class=" col-sm-5">
+          <h6> <img src="./assets/camera_24px.svg"> &nbsp;&nbsp;Photography</h6>
+          <p>Nam quam nunc, blandit vel, luctus pulvinar, hend lorem.
+             Maecenas nec odioet ante tincidunt tempus luctus pulvinar,
+             hendrerit id, lorem.</p>
+         </div>
+         <div class=" col-sm-5">
+          <h6> <img src="./assets/how_to_reg_24px.svg"> &nbsp;&nbsp;Contant Creation</h6>
+          <p>Nam quam nunc, blandit vel, luctus pulvinar, hend lorem.
+             Maecenas nec odioet ante tincidunt tempus luctus pulvinar,
+             hendrerit id, lorem.</p>
+         </div>
+         <div class=" col-sm-5 mr-5">
+         <h6> <img src="./assets/color_lens_24px.svg"> &nbsp;&nbsp;Arts</h6>
+         <p>Nam quam nunc, blandit vel, luctus pulvinar, hend lorem.
+            Maecenas nec odioet ante tincidunt tempus luctus pulvinar,
+            hendrerit id, lorem.</p>
+        </div>
+      </div>
+      </div>
+      <div class="arrow1">
+        <a href="#page3"><img src = "./assets/arrowdown.svg"></a>
+        </div>
+      </div>
+      </section>
+        <!--Second page ends--> 
+        <!--Page 3-->
+        <section id="page3">
+        <div class="container-fluid-md">
+        <div id="page3" class="bg-img1">
+          <div class="color">
+            <nav class="nav nav-tabs nav-stacked" style="border: none;">
+              <a class="nav-link page text-white" href="#">ALLISSON SMITH</a>
+              <a class="nav-link page text-white" href="#">+1 98998 32783748 </a>
+              <a class="nav-link page text-white" href="#">allisonsmith@fiercehr.ng</a>
+              </nav>
+          </div>
+        </div>
+        <div class="about"><h3 class="text">Proficiencies</h3></div>
+        <div class="container mt-5  bars">
+          <div class="row">
+              <div class="col-md-3 col-sm-6 ">
+             
+                  <div class="progress blue">
+                      <span class="progress-left">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">97%</div>
+                     
+                  </div>
+                  <p class="bar-text">Photography</p>
+              </div>
+              <div class="col-md-3 col-sm-6 ">
+             
+                <div class="progress blue">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">97%</div>
+                   
+                </div>
+                <p class="bar-text">WEB DESIGN</p>
+            </div> 
+            <div class="col-md-3 col-sm-6">
+             
+              <div class="progress blue">
+                  <span class="progress-left">
+                      <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                      <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">97%</div>
+                 
+              </div>
+              <p class="bar-text">UI/UX Design</p>
+          </div> 
+             
+              
        
+              <div class="col-sm-1 media-links">
+                <p><i class="fa fa-twitter text-white" aria-hidden="true"></i></p>
+                <p><i class="fa fa-youtube text-white" aria-hidden="true"></i></p>
+                <P><i class="fa fa-linkedin text-white" aria-hidden="true"></i></P>
+                <p><i class="fa fa-facebook text-white" aria-hidden="true"></i></p>
+                <p><i class="fa fa-pinterest text-white" aria-hidden="true"></i></p>
+              </div>
+            </div>
+        </div>
+            <div class="arrow">
+              <a href="#page4"><img src = "./assets/arrowdown.svg"></a>
+              </div>
+      </div>
+        </section>
+       <!--Page 3 ends-->
+       <!--Page 4-->
+        <section id="page4">
+          <div class="container-fluid-md">
+            <div class="bg-img3">
+              <div class="color1">
+                <nav class="nav nav-tabs nav-stacked" style="border: none;">
+                  <a class="nav-link page text-dark" href="#">ALLISSON SMITH</a>
+                  <a class="nav-link page text-dark" href="#">+1 98998 32783748 </a>
+                  <a class="nav-link page text-dark" href="#">allisonsmith@fiercehr.ng</a>
+                  </nav>
+              </div>
+              <div class="about"><h3 class="text text-dark mt-3">Work Experience</h3></div>
+              <div class="table-responsive mt-5">
+              <table class="table mt-5">
+                <tbody>
+                  <tr>
+                    <th scope="col">2005-2008</th>
+                    <th scope="col">Art Director,
+                      Alive Teens.</th>
+                    <td scope="col">Lorem ipsum dolor sit amet, consectetur adi
+                      piscing elit. Vestibulum libero metus, sodales
+                       sed egestas vel, tristique sit amet felis. Sed
+                      </td>
+                    </tr>
+                  <tr>
+                    <th scope="row">2008-2011</th>
+                    <th>Design Lead,
+                      Terrahub.</th>
+                    <td>Lorem ipsum dolor sit amet, consectetur adi
+                      piscing elit. Vestibulum libero metus, sodales
+                       sed egestas vel, tristique sit amet felis. Sed
+                      </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2011-2013</th>
+                    <th>Head of Marketing,
+                      FierceHR.</th>
+                    <td>Lorem ipsum dolor sit amet, consectetur adi
+                      piscing elit. Vestibulum libero metus, sodales
+                       sed egestas vel, tristique sit amet felis. Sed
+                      </td>
+   
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+            <div class="arrow">
+              <a href="#page5"><img src = "./assets/arrowdown.svg"></a>
+            </div>
+           </div>
+           
+          </div>
+        </section>
+        <!--Page5-->
+        <section id="page5">
+          <div class="bg-img4">
+            <div class="color3">
+              <nav class="nav nav-tabs nav-stacked" style="border: none;">
+                <a class="nav-link page text-white" href="#">ALLISSON SMITH</a>
+                <a class="nav-link page text-white" href="#">+1 98998 32783748 </a>
+                <a class="nav-link page text-white" href="#">allisonsmith@fiercehr.ng</a>
+                </nav>
+                <!-- Default form contact -->
+<form class="text-center p-5 text-white" action="#!">
 
+  <p class="h4 mb-4">Contact us</p>
 
-    <!-- Js scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+  <!-- Name -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4 bg-none" placeholder="Name">
 
+  <!-- Email -->
+  <input type="email" id="defaultContactFormEmail" class="form-control mb-4 " placeholder="E-mail">
+
+  <input type="number" id="defaultContactFormNumber" class="form-control mb-4" placeholder="Phone Number">
+
+  <!-- Message -->
+  <div class="form-group">
+      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+  </div>
+
+  <!-- Send button -->
+  <button class="btn  btn-block" type="submit">Send Message</button>
+
+</form>
+<!-- Default form contact -->
+<div class="col-sm-1 media-link">
+  <p><i class="fa fa-twitter text-white" aria-hidden="true"></i></p>
+  <p><i class="fa fa-youtube text-white" aria-hidden="true"></i></p>
+  <P><i class="fa fa-linkedin text-white" aria-hidden="true"></i></P>
+  <p><i class="fa fa-facebook text-white" aria-hidden="true"></i></p>
+  <p><i class="fa fa-pinterest text-white" aria-hidden="true"></i></p>
+</div>
+            </div>
+          </div>
+          
+        </section>
+        <!--Page 4 ends-->
+        <!--Footer-->
+        <footer class="container-fluid" style="margin-top: -3%;">
+          <div class="row">
+          <div class="col-sm-4">
+            <h6><img src="./assets/LOGO (2).png"></h6>
+            <p>Design-driven companies worldwide use
+              FierceHR to recruit exceptional talent.</p>
+              <p class="src">Connect with us for new jobs & projects.</p>
+          </div>
+          <div class="col-sm-4">
+            <h6>FierceHR</h6>
+            <p>About Us</p>
+            <p>FAQ</p>
+            <p>Privacy Policy</p>
+            <p>Contact Us</p>
+         
+          </div>
+          <div class="col-sm-4 ">
+            <h6>Hiring Tools</h6>
+            <p>Post A Job</p>
+            <p>Find Designers</p>
+            <p>Job Network</p>
+            <p>Design Salary Guide</p>
+          </div>
+          </div>
+        </footer>
+  
+  </body>
 </html>
